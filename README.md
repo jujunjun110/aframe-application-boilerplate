@@ -1,44 +1,41 @@
-## aframe-my-comp-component
+## project-name
 
-A My Comp component for [A-Frame](https://aframe.io).
+## プロジェクトのインストール
 
-### API
+1. git clone 
+2. npm install 
 
-| Property | Description | Default Value |
-| -------- | ----------- | ------------- |
-|          |             |               |
+## プロジェクトのビルド
 
-### Installation
+1. npm run build ... アプリケーションをビルドします
+2. npm run dev ... nodeサーバーを開きアプリケーションを実行します。app.jsなどへの変更は自動的に反映されます。
 
-#### Browser
+## ファイル構成
 
-Install and use by directly including the [browser files](dist):
+scripts/app.js ... 実アプリケーションを書くところ
+scripts/require.js ... 必要モジュールを書くところ
 
-```html
-<head>
-  <title>My A-Frame Scene</title>
-  <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-  <script src="https://rawgit.com/jujunjun110/my-comp/master/dist/aframe-my-comp-component.min.js"></script>
-</head>
+`npm run build` することで　`scripts/app.js` と `scripts/require.js` から `app/scripts/build.js` がビルドされます。
+`index.html`は`app/scripts/build.js`のみ参照するようになっています。
 
-<body>
-  <a-scene>
-    <a-entity my-comp="exampleProp: exampleVal"></a-entity>
-  </a-scene>
-</body>
-```
+本番環境へは `app/` 以下のみアップロードすることで動くようになっています。
 
-#### npm
+アプリケーションにモジュールを追加したいときは `npm install -S {packagename}`としてインストールしたのち、
+`require.js` に `require("{packagename}");` の一行を追加しましょう
 
-Install via npm:
+--trim--
 
-```bash
-npm install aframe-my-comp-component
-```
+## このプロジェクトについて
 
-Then register and use.
+A-Frameのわりと本格的なプロダクトを作るための雛形です
 
-```js
-require('aframe');
-require('aframe-my-comp-component');
-```
+以下の手順で展開してください。
+
+1. git clone git@github.com:jujunjun110/aframe-application-boilerplate.git
+2. npm install 
+3. npm run unboil
+
+
+
+
+
