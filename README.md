@@ -1,4 +1,16 @@
-## project-name
+## このプロジェクトについて
+
+A-Frameのわりと本格的なプロダクトを作るための雛形です
+
+以下の手順で展開してください。
+
+1. git clone git@github.com:jujunjun110/aframe-application-boilerplate.git
+2. .git以下を削除し、プロジェクトのリモートリポジトリを正しく設定
+3. npm install 
+4. npm run unboil
+
+--trim--
+# project-name
 
 ## プロジェクトのインストール
 
@@ -26,21 +38,3 @@
 
 アプリケーションでnpmモジュールを利用したいときは `npm install -S {packagename}`としてインストールしたのち、
 `require.js` に `require("{packagename}");` の一行を追加しましょう
-
---trim--
-
-## このプロジェクトについて
-
-A-Frameのわりと本格的なプロダクトを作るための雛形です
-
-以下の手順で展開してください。
-
-1. git clone git@github.com:jujunjun110/aframe-application-boilerplate.git
-2. .git以下を削除し、プロジェクトのリモートリポジトリを正しく設定
-3. npm install 
-4. npm run unboil
-
-
-
-
-
