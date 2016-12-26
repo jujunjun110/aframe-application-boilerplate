@@ -4,7 +4,7 @@
     "description": "My Comp component for A-Frame.",
     "main": "index.js",
     "scripts": {
-        "build": "browserify scripts/main.js -o app/script/build.js",
+        "build": "browserify scripts/main.js -o app/scripts/build.js",
         "dev": "budo scripts/main.js:app/scripts/build.js --dir app --port 8000 --live --open",
         "dist": "webpack index.js dist/app.js && webpack -p index.js dist/app.min.js",
         "lint": "semistandard -v | snazzy",

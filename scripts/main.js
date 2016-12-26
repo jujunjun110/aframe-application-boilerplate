@@ -1,2 +1,2 @@
 require('aframe');
-require('../index.js');
+require('./app.js');
