@@ -8,19 +8,23 @@
 ## プロジェクトのビルド
 
 1. npm run build ... アプリケーションをビルドします
-2. npm run dev ... nodeサーバーを開きアプリケーションを実行します。app.jsなどへの変更は自動的に反映されます。
+2. npm run dev ... nodeサーバーを開きアプリケーションを実行します。app.jsなどへの変更はリアルタイムにブラウザ側に反映されます。
 
 ## ファイル構成
 
-scripts/app.js ... 実アプリケーションを書くところ
-scripts/require.js ... 必要モジュールを書くところ
+- scripts以下 ... 開発用のスクリプト置き場
+ - scripts/app.js ... 自分でアプリケーションを書くところ
+ - scripts/require.js ... 必要なモジュールを書くところ
+- app以下 ... 本番にアップロードするところ
+ - app/index.html ... メインのHTMLファイル
+ - app/scripts/build.js ... 最終的にビルドされる、ブラウザで実行可能なjsファイル
 
 `npm run build` することで　`scripts/app.js` と `scripts/require.js` から `app/scripts/build.js` がビルドされます。
 `index.html`は`app/scripts/build.js`のみ参照するようになっています。
 
 本番環境へは `app/` 以下のみアップロードすることで動くようになっています。
 
-アプリケーションにモジュールを追加したいときは `npm install -S {packagename}`としてインストールしたのち、
+アプリケーションでnpmモジュールを利用したいときは `npm install -S {packagename}`としてインストールしたのち、
 `require.js` に `require("{packagename}");` の一行を追加しましょう
 
 --trim--
