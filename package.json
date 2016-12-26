@@ -46,7 +46,7 @@
     },
     "semistandard": {
         "ignore": [
-            "app/build.js",
+            "app/build.js"
         ]
     }
 }
