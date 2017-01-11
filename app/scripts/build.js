@@ -69530,11 +69530,6 @@ module.exports = getWakeLock();
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],2:[function(require,module,exports){
-/* here you write your application. */
-console.log("hey");
-alert("hey");
-},{}],3:[function(require,module,exports){
 require('aframe');
-require('./app.js');
 
-},{"./app.js":2,"aframe":1}]},{},[3]);
+},{"aframe":1}]},{},[2]);

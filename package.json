@@ -1,11 +1,11 @@
 {
-  "name": "project-name",
+  "name": "Kirara",
   "version": "1.0.0",
-  "description": "project-name",
+  "description": "Kirara",
   "main": "index.js",
   "scripts": {
     "build": "browserify scripts/require.js -o app/scripts/build.js",
-    "dev": "budo scripts/require.js:scripts/build.js --dir app --port 8000 --live --open",
+    "dev": "budo app/scripts/app.js:scripts/app.js --dir app --port 8000 --live --open",
     "lint": "semistandard -v | snazzy",
     "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
     "ghpages": "npm run preghpages && ghpages -p gh-pages",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jujunjun110/aframe-application-boilerplate.git"
+    "url": "git+https://github.com/voyagegroup/kirara.git"
   },
   "keywords": [
     "aframe",
@@ -24,12 +24,12 @@
     "mozvr",
     "webvr"
   ],
-  "author": "jujunjun110 <https://twitter.com/jujunjun110>",
+  "author": "VOYAGE GROUP",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jujunjun110/aframe-application-boilerplate/issues"
+    "url": "https://github.com/voyagegroup/kirara/issues"
   },
-  "homepage": "https://github.com/jujunjun110/aframe-application-boilerplate#readme",
+  "homepage": "https://github.com/voyagegroup/kirara#readme",
   "devDependencies": {
     "aframe": "^0.4.0",
     "browserify": "^13.0.0",
