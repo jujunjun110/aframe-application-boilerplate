@@ -4,13 +4,13 @@
   "description": "Kirara",
   "main": "index.js",
   "scripts": {
-    "build": "browserify scripts/require.js -o app/scripts/build.js",
-    "dev": "budo app/scripts/app.js:scripts/app.js --dir app --port 8000 --live --open",
+    "build": "browserify script/require.js -o app/script/build.js",
+    "dev": "budo app/script/app.js:script/app.js --dir app --port 8000 --live --open",
     "lint": "semistandard -v | snazzy",
     "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
     "ghpages": "npm run preghpages && ghpages -p gh-pages",
     "start": "npm run dev",
-    "unboil": "node scripts/unboil.js"
+    "unboil": "node script/unboil.js"
   },
   "repository": {
     "type": "git",
