@@ -10,7 +10,7 @@
         "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
         "ghpages": "npm run preghpages && ghpages -p gh-pages",
         "start": "npm run dev",
-        "unboil": "node script/unboil.js"
+        "unboil": "node src/unboil.js"
     },
     "repository": {
         "type": "git",
