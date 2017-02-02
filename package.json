@@ -4,7 +4,7 @@
     "description": "project-name",
     "main": "index.js",
     "scripts": {
-        "build": "browserify src/require.js -o app/build.js",
+        "build": "browserify src/require.js -o dev/build.js && browserify src/app.js -o dev/app.js && browserify src/components.js -o dev/components.js &&",
         "dev": "budo app/script/app.js:script/app.js --dir app --port 8000 --live --open",
         "lint": "semistandard -v | snazzy",
         "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
