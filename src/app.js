@@ -4,7 +4,6 @@ var main = function () {
 }
 
 var scene = document.querySelector("a-scene");
-
 if (scene.hasLoaded) {
     main();
 } else {
