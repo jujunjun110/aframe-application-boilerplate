@@ -1,55 +1,53 @@
 {
-  "name": "Kirara",
-  "version": "1.0.0",
-  "description": "Kirara",
-  "main": "index.js",
-  "scripts": {
-    "build": "browserify script/require.js -o app/script/build.js",
-    "dev": "budo app/script/app.js:script/app.js --dir app --port 8000 --live --open",
-    "lint": "semistandard -v | snazzy",
-    "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
-    "ghpages": "npm run preghpages && ghpages -p gh-pages",
-    "start": "npm run dev",
-    "unboil": "node script/unboil.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/voyagegroup/kirara.git"
-  },
-  "keywords": [
-    "aframe",
-    "aframe-component",
-    "aframe-vr",
-    "vr",
-    "mozvr",
-    "webvr"
-  ],
-  "author": "VOYAGE GROUP",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/voyagegroup/kirara/issues"
-  },
-  "homepage": "https://github.com/voyagegroup/kirara#readme",
-  "devDependencies": {
-    "aframe": "^0.4.0",
-    "browserify": "^13.0.0",
-    "browserify-css": "^0.9.1",
-    "budo": "^8.2.2",
-    "ghpages": "^0.0.8",
-    "inquirer": "^1.0.2",
-    "randomcolor": "^0.4.4",
-    "semistandard": "^8.0.0",
-    "shelljs": "^0.7.0",
-    "shx": "^0.1.1",
-    "snazzy": "^4.0.0",
-    "webpack": "^1.13.0"
-  },
-  "semistandard": {
-    "ignore": [
-      "app/build.js"
-    ]
-  },
-  "dependencies": {
-    "envify": "^4.0.0"
-  }
+    "name": "Kirara",
+    "version": "1.0.0",
+    "description": "Kirara",
+    "main": "index.js",
+    "scripts": {
+        "build": "browserify script/require.js -o app/script/build.js",
+        "dev": "budo app/script/app.js:script/app.js --dir app --port 8000 --live --open",
+        "lint": "semistandard -v | snazzy",
+        "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
+        "ghpages": "npm run preghpages && ghpages -p gh-pages",
+        "start": "npm run dev",
+        "unboil": "node script/unboil.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/voyagegroup/kirara.git"
+    },
+    "keywords": [
+        "aframe",
+        "aframe-component",
+        "aframe-vr",
+        "vr",
+        "mozvr",
+        "webvr"
+    ],
+    "author": "VOYAGE GROUP",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/voyagegroup/kirara/issues"
+    },
+    "homepage": "https://github.com/voyagegroup/kirara#readme",
+    "devDependencies": {
+        "aframe": "^0.4.0",
+        "browserify": "^13.0.0",
+        "browserify-css": "^0.9.1",
+        "budo": "^8.2.2",
+        "ghpages": "^0.0.8",
+        "inquirer": "^1.0.2",
+        "randomcolor": "^0.4.4",
+        "semistandard": "^8.0.0",
+        "shelljs": "^0.7.0",
+        "shx": "^0.1.1",
+        "snazzy": "^4.0.0",
+        "webpack": "^1.13.0",
+        "envify": "^4.0.0"
+    },
+    "semistandard": {
+        "ignore": [
+            "app/build.js"
+        ]
+    }
 }
