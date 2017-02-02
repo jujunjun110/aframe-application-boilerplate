@@ -3,7 +3,7 @@ var main = function () {
 	console.log("hello world");
 }
 
-var scene = querySelector("a-scene");
+var scene = document.querySelector("a-scene");
 
 if (scene.hasLoaded) {
     main();
