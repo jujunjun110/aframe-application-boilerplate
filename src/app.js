@@ -1,6 +1,7 @@
 /* here you write your application. */
 var main = function () {
-	console.log("hello world");
+	// ES6 test
+	["hello", "world"].map(n => console.log(n));
 }
 
 var scene = document.querySelector("a-scene");
