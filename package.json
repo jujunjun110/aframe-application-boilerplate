@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify src/require.js -t babelify -o dev/build.js && browserify src/app.js -t babelify -o dev/app.js && browserify src/components.js -t babelify -o dev/components.js",
-    "dev": "budo dev/app.js:src/app.js src/components.js --dir dev -t babelify --live --open",
+    "dev": "budo src/app.js --live --open --dir dev -- -t babelify -o dev/app.js",
     "lint": "semistandard -v | snazzy",
     "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
     "ghpages": "npm run preghpages && ghpages -p gh-pages",
