@@ -4,12 +4,13 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
 
 以下の手順で展開してください。
 
-1. git clone git@github.com:jujunjun110/aframe-application-boilerplate.git
-2. .git以下を削除し、プロジェクトのリモートリポジトリを正しく設定
+1. `git clone git@github.com:jujunjun110/aframe-application-boilerplate.git && cd aframe-application-boilerplate && rm -rf .git `
+2. プロジェクトのリモートリポジトリを正しく設定
 3. npm install 
 4. npm run unboil
 
 --trim--
+
 # project-name
 
 ## プロジェクトのインストール
@@ -19,22 +20,25 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
 
 ## プロジェクトのビルド
 
-1. npm run build ... アプリケーションをビルドします
-2. npm run dev ... nodeサーバーを開きアプリケーションを実行します。app.jsなどへの変更はリアルタイムにブラウザ側に反映されます。
+1. npm run build ... アプリケーションをビルドします。
+2. npm run dev ... nodeサーバーを開きアプリケーションを実行します。`src/app.js` への変更はリアルタイムにブラウザ側に反映されます。
 
 ## ファイル構成
 
-- scripts以下 ... 開発用のスクリプト置き場
- - scripts/app.js ... 自分でアプリケーションを書くところ
- - scripts/require.js ... 必要なモジュールを書くところ
-- app以下 ... 本番にアップロードするところ
- - app/index.html ... メインのHTMLファイル
- - app/scripts/build.js ... 最終的にビルドされる、ブラウザで実行可能なjsファイル
+- src以下 ... 自分でjavascriptを編集するところ。
+ - src/require.js ... 必要な外部モジュールを書くところ。dev/build.jsにビルドされます。
+ - src/app.js ... メイン処理を書くところ。dev/app.jsにビルドされます。ES6でOK。
+ - src/component.js ... コンポーネントを書くところ。書いたら名前を変えてapp.js内でrequireする。ES6でOK。
+- dev以下 ... アプリケーションの実行に本当に必要なファイルだけがあるところ。（開発用）
+ - dev/index.html ... メインのHTMLファイル。ここは直接編集します。
+ - dev/app.js ... ブラウザで実行可能な形にビルドされた自作スクリプト	。自分では編集しません。
+ - dev/build.js ... ブラウザで実行可能な形にビルドされた自作スクリプト。自分では編集しません。
+- dist以下 ... 本番用。dev以下のものをより高速に実行できるようにビルドしなおす予定。
+ - TO BE DONE !
 
-`npm run build` することで　`scripts/app.js` と `scripts/require.js` から `app/scripts/build.js` がビルドされます。
-`index.html`は`app/scripts/build.js`のみ参照するようになっています。
+`npm run build` することで `src/require.js` が `dev/build.js` に、 `src/app.js` が `dev/app.js` にそれぞれビルドされます。
 
-本番環境へは `app/` 以下のみアップロードすることで動くようになっています。
+本番環境へは `dev/` 以下のみアップロードすることで動くようになっています。
 
 アプリケーションでnpmモジュールを利用したいときは `npm install -S {packagename}`としてインストールしたのち、
-`require.js` に `require("{packagename}");` の一行を追加しましょう
+`src/require.js` に `require("{packagename}");` の一行を追加しましょう
