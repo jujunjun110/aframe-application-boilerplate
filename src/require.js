@@ -1,1 +1,1 @@
-require('aframe');
+require('aframe')
