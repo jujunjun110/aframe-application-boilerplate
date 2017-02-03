@@ -7,8 +7,6 @@
     "build": "browserify src/require.js -t babelify -o dev/build.js && browserify src/app.js -t babelify -o dev/app.js",
     "dev": "budo src/app.js --live --open --dir dev -- -t babelify -o dev/app.js",
     "lint": "semistandard -v | snazzy",
-    "preghpages": "npm run build && shx rm -rf gh-pages && shx mkdir gh-pages && shx cp -r app/* gh-pages",
-    "ghpages": "npm run preghpages && ghpages -p gh-pages",
     "start": "npm run dev",
     "unboil": "node src/unboil.js"
   },
@@ -21,7 +19,6 @@
     "aframe-component",
     "aframe-vr",
     "vr",
-    "mozvr",
     "webvr"
   ],
   "author": "jujunjun110 <https://twitter.com/jujunjun110>",
