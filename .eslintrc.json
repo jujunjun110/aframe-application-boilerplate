@@ -3,10 +3,14 @@
     "env": {
         "es6": true
     },
+    "globals": {
+        "AFRAME": true
+    },
     "rules": {
         "max-len": [1, 100, 2],
         "indent": [2, 4, {
             "SwitchCase": 1
         }]
     }
+
 }

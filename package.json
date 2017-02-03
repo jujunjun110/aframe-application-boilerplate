@@ -6,7 +6,7 @@
   "scripts": {
     "build": "browserify src/require.js -t babelify -o dev/build.js && browserify src/app.js -t babelify -o dev/app.js",
     "dev": "budo src/app.js --live --open --dir dev -- -t babelify -o dev/app.js",
-    "lint": "eslint src & exit 0",
+    "lint": "eslint src; exit 0",
     "start": "npm run dev",
     "unboil": "node src/unboil.js"
   },
