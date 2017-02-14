@@ -1,5 +1,5 @@
 {
-	"parser": "babel-eslint",
+    "parser": "babel-eslint",
     "extends": "standard",
     "env": {
         "es6": true
@@ -12,6 +12,9 @@
         "indent": [2, 4, {
             "SwitchCase": 1
         }]
-    }
-
+    },
+    "space-before-function-paren": ["error", {
+        "anonymous": "always",
+        "named": "ignore"
+    }]
 }
