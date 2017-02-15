@@ -5,7 +5,8 @@
         "es6": true
     },
     "globals": {
-        "AFRAME": true
+        "AFRAME": true,
+        "THREE": true
     },
     "rules": {
         "max-len": [1, 100, 2],
@@ -18,3 +19,4 @@
         "named": "ignore"
     }]
 }
+
