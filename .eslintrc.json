@@ -12,11 +12,12 @@
         "max-len": [1, 100, 2],
         "indent": [2, 4, {
             "SwitchCase": 1
+        }],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "ignore"
         }]
-    },
-    "space-before-function-paren": ["error", {
-        "anonymous": "always",
-        "named": "ignore"
-    }]
+
+    }
 }
 
