@@ -4,10 +4,11 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
 
 以下の手順で展開してください。
 
-1. `git clone git@github.com:jujunjun110/aframe-application-boilerplate.git && cd aframe-application-boilerplate && rm -rf .git `
-2. プロジェクトのリモートリポジトリを正しく設定
-3. npm install 
-4. npm run unboil
+1. `git clone git@github.com:jujunjun110/aframe-application-boilerplate.git`
+2. `cd aframe-application-boilerplate && rm -rf .git`
+3. プロジェクトのリモートリポジトリを正しく設定
+4. npm install 
+5. npm run unboil ... package.json 等にプロジェクトネームやgitリポジトリを適切に設定できます。
 
 --trim--
 
