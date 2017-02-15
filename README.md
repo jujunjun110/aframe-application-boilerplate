@@ -35,10 +35,13 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
  - dev/app.js ... ブラウザで実行可能な形にビルドされた自作スクリプト	。自分では編集しません。
  - dev/build.js ... ブラウザで実行可能な形にビルドされた外部スクリプト。自分では編集しません。
 - dist以下 ... 本番用。dev以下のものをより高速に実行できるようにビルドします
- - dist/index.html ... dev/index.html をコピー。直接編集しない。
- - dist/build.js ... dev/app.js と dev/build.js をマージし、minifyしたもの。本番のjsはこの1ファイルのみで動作する。
- 
+ - dist/index.html ... dev/index.html をコピー。自分では編集しません。
+ - dist/build.js ... dev/app.js と dev/build.js をマージし、minifyしたもの。本番のjsはこの1ファイルのみで動作する。自分では編集しません。
+
+
+
 `npm run build` することで `src/require.js` が `dev/build.js` に、 `src/app.js` が `dev/app.js` にそれぞれビルドされます。
+
 `npm run dist` することで `dev/app.js` と `dev/build.js` がまとめられ高速で動作するようになります。
 
 本番環境へは `dist/` 以下のみアップロードすることで動くようになっています。
