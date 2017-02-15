@@ -41,7 +41,7 @@ const q3 = {
 inquirer.prompt([q1, q2, q3]).then(run)
 
 function run(ans) {
-    ls(['package.json', 'README.md']).forEach(function (file) {
+    ls(['dev/index.html', 'package.json', 'README.md']).forEach(function (file) {
         sed('-i', 'project-name', ans.projectname, file)
         sed('-i', 'jujunjun110/aframe-application-boilerplate', ans.repo, file)
         sed('-i', 'jujunjun110 <https://twitter.com/jujunjun110>', ans.author, file)
