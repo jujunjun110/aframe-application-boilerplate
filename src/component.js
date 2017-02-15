@@ -1,9 +1,8 @@
-/* here you write your components. */
-
 if (typeof AFRAME === 'undefined') {
     throw new Error('Component attempted to register before AFRAME was available.')
 }
 
+/* here you write your components. */
 AFRAME.registerComponent('my-component', {
     schema: {},
     multiple: false,
@@ -17,3 +16,4 @@ AFRAME.registerComponent('my-component', {
     pause: function () {},
     play: function () {}
 })
+
