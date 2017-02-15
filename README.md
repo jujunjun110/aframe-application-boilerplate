@@ -22,6 +22,7 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
 
 1. npm run build ... アプリケーションをビルドします。
 2. npm run dev ... nodeサーバーを開きアプリケーションを実行します。`src/app.js` への変更はリアルタイムにブラウザ側に反映されます。
+3. npm run dist ... 本番環境にアップロードするファイルをdist/ 以下にビルドします。
 
 ## ファイル構成
 
@@ -33,12 +34,14 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
  - dev/index.html ... メインのHTMLファイル。ここは直接編集します。
  - dev/app.js ... ブラウザで実行可能な形にビルドされた自作スクリプト	。自分では編集しません。
  - dev/build.js ... ブラウザで実行可能な形にビルドされた外部スクリプト。自分では編集しません。
-- dist以下 ... 本番用。dev以下のものをより高速に実行できるようにビルドしなおす予定。
- - TO BE DONE !
-
+- dist以下 ... 本番用。dev以下のものをより高速に実行できるようにビルドします
+ - dist/index.html ... dev/index.html をコピー。直接編集しない。
+ - dist/build.js ... dev/app.js と dev/build.js をマージし、minifyしたもの。本番のjsはこの1ファイルのみで動作する。
+ 
 `npm run build` することで `src/require.js` が `dev/build.js` に、 `src/app.js` が `dev/app.js` にそれぞれビルドされます。
+`npm run dist` することで `dev/app.js` と `dev/build.js` がまとめられ高速で動作するようになります。
 
-本番環境へは `dev/` 以下のみアップロードすることで動くようになっています。
+本番環境へは `dist/` 以下のみアップロードすることで動くようになっています。
 
 アプリケーションでnpmモジュールを利用したいときは `npm install -S {packagename}`としてインストールしたのち、
 `src/require.js` に `require("{packagename}");` の一行を追加しましょう
