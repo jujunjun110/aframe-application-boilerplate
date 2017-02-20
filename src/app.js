@@ -2,12 +2,18 @@
 require('./component.js')
 require('./shader.js')
 
-document.addEventListener('DOMContentLoaded', function () {
-    if (typeof AFRAME === 'undefined') {
-        throw new Error('Application started before AFRAME was available.')
-    }
+function main() {
     /* here you write main logic. */
     // ES6 notation
     ['hello', 'world', '!'].map((v) => console.log(v))
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sceneEl = document.querySelector('a-scene')
+    if (sceneEl.hasLoaded) {
+        main()
+    } else {
+        sceneEl.addEventListener('loaded', main)
+    }
 })
 
