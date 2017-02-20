@@ -7,7 +7,6 @@ AFRAME.registerComponent('my-component', {
     schema: {},
     multiple: false,
     init: function () {
-        // ES6 notation
         ['hello', 'component'].map((v) => console.log(v))
     },
     update: function (oldData) {},

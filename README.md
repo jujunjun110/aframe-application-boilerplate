@@ -6,9 +6,11 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
 
 1. `git clone git@github.com:jujunjun110/aframe-application-boilerplate.git`
 2. `cd aframe-application-boilerplate && rm -rf .git`
-3. プロジェクトのリモートリポジトリを正しく設定
-4. npm install 
-5. npm run unboil ... package.json 等にプロジェクトネームやgitリポジトリを適切に設定できます。
+3. `git remote add {reponame.git}` ... プロジェクトのリモートリポジトリを正しく設定
+4. `npm install` 
+5. `npm run unboil` ... package.json 等にプロジェクトネームやgitリポジトリを適切に設定できます。
+
+↓↓ 以下ビルド後の説明用。unboilでこの下だけが残ります。 ↓↓
 
 --trim--
 
@@ -39,8 +41,6 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
  - dist/index.html ... dev/index.html をコピー。自分では編集しません。
  - dist/build.js ... dev/app.js と dev/build.js をマージし、minifyしたもの。本番のjsはこの1ファイルのみで動作する。自分では編集しません。
 
-
-
 `npm run build` することで `src/require.js` が `dev/build.js` に、 `src/app.js` が `dev/app.js` にそれぞれビルドされます。
 
 `npm run dist` することで `dev/app.js` と `dev/build.js` がまとめられ高速で動作するようになります。
@@ -48,4 +48,4 @@ A-Frameのわりと本格的なプロダクトを作るための雛形です
 本番環境へは `dist/` 以下のみアップロードすることで動くようになっています。
 
 アプリケーションでnpmモジュールを利用したいときは `npm install -S {packagename}`としてインストールしたのち、
-`src/require.js` に `require("{packagename}");` の一行を追加しましょう
+`src/require.js` に `require("{packagename}")` の一行を追加しましょう
