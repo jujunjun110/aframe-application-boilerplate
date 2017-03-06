@@ -9,15 +9,8 @@
 
 <body>
     <a-scene>
-        <a-assets>
-            <img id="red_image" src="image/red.png">
-            <img id="blue_image" src="image/blue.png">
-        </a-assets>
-        <a-box color="red" stereo="eye:left" position="1 0 -3"></a-box>
-        <a-box color=blue stereo="eye:right" position="-1 0 -3"></a-box>
-        <a-sky src="#red_image" radius="100" stereo="eye:left"></a-sky>
-        <a-sky src="#blue_image" radius="100" stereo="eye:right"></a-sky>
-        <a-camera position="0 0 10" stereocam="eye:right"></a-camera>
+        <a-assets></a-assets>
+        <a-entity my-component geometry="primitive: box" material="shader:my-shader" position="0 1 -3"></a-entity>
     </a-scene>
 </body>
 
